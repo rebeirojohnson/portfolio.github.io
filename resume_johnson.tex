@@ -1,0 +1,123 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=0.45in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+
+\definecolor{sectionblue}{HTML}{1F5F8B}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\baselinestretch}{0.96}
+
+\titleformat{\section}
+  {\large\bfseries\color{sectionblue}}
+  {}{0pt}{}[\vspace{-4pt}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+\setlist[itemize]{
+    leftmargin=18pt,
+    itemsep=2pt,
+    topsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+\setlist[enumerate]{
+    leftmargin=18pt,
+    itemsep=2pt,
+    topsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \begin{tabularx}{\textwidth}{@{}X r@{}}
+        \textbf{#1} & #2 \\
+        #3 & #4 \\
+    \end{tabularx}
+}
+
+\begin{document}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+    {\Huge \textbf{JOHNSON REBEIRO}} &
+    \begin{tabular}{@{}r@{}}
+        \href{mailto:rebeirojohnson2001@gmail.com}{rebeirojohnson2001@gmail.com} \\
+        +91 7899404714 \\
+        Bangalore, India \\
+        \href{https://linkedin.com/in/johnsonrebeiro}{linkedin.com/in/johnsonrebeiro} \\
+        \href{https://github.com/rebeirojohnson}{github.com/rebeirojohnson}
+    \end{tabular}
+\end{tabularx}
+
+\vspace{10pt}
+
+Backend Software Engineer with 3+ years of experience building scalable APIs, real-time systems, and data-driven platforms. Specialized in Python, distributed systems, and high-performance backend architecture, using Python, Django, PostgreSQL, Redis, Kafka, Docker, and AWS.
+
+\section{\Large{Professional Experience}}
+
+\resumeSubheading
+{Software Developer Engineer (SDE)}{March 2023 - Present}
+{Learn Basics (Lighting Bees Private Limited)}{}
+{\small Software Developer Intern Aug 2022 -- Mar 2023}
+
+\begin{itemize}
+    \item Engineered a centralized OMR processing platform implementing barcode detection, image preprocessing, automated answer extraction, and real-time processing workflows for large-scale examination management.
+    \item Designed and developed a centralized smart print and scan management platform that intelligently routed print jobs across 8 printers using custom scheduling algorithms and processed real-time barcode events from 4 serial-connected scanners to automate document tracking.
+    \item Built a Neo4j-based knowledge graph integrated with LLMs to power personalized content recommendations across the LMS.
+    \item Led the development of a real-time content management system with multi-user collaboration.
+    \item Built an adaptive worksheet recommendation engine that analysed historical student performance to generate personalized question sets based on learning gaps and proficiency.
+    \item Designed and implemented Docker-based CI/CD pipelines, PostgreSQL replication, server monitoring, and automated alerting to improve deployment reliability and system availability.
+    \item Designed and implemented an automated LaTeX document generation pipeline, replacing manual PowerPoint/Word workflows and improving PDF generation performance by 10\(\times\) while enabling scalable distribution through Amazon S3.
+    \item Developed event-driven backend integrations to synchronize Overleaf, SharePoint, Excel, and LMS data into a centralized PostgreSQL database.
+    \item Enhanced database schema design to support evolving product requirements.
+    \item Automated email and discord messages, reducing manual communication efforts.
+\end{itemize}
+
+\section{\Large{Projects}}
+
+\begin{enumerate}
+    \item \textbf{Distributed Algorithmic Trading Platform}
+    \begin{itemize}
+        \item Designed and developed a distributed trading platform with real-time market data, order management, and portfolio tracking using Python, FastAPI, PostgreSQL, Redis, Kafka, and Docker.
+        \item Implemented low-latency order processing and Web Socket-based real-time updates using an event-driven architecture.
+        \item Built an order life cycle workflow supporting validation, execution, cancellation, position updates, and persistent trade history.
+        \item Used Redis for caching and Kafka for asynchronous market and order events, enabling scalable processing across independent services.
+        \item Added idempotent event handling, retry mechanisms, and structured logging to improve reliability and prevent duplicate order processing.
+    \end{itemize}
+\end{enumerate}
+
+\section{\Large{Skills}}
+
+\begin{itemize}
+    \item \textbf{Languages:} Python, LaTeX.
+    \item \textbf{Frameworks:} Django, FastAPI
+    \item \textbf{Databases:} PostgreSQL, Redis, Neo4j, MySQL
+    \item \textbf{Cloud \& DevOps:} Docker, AWS (EC2, S3), CI/CD, MinIO
+    \item \textbf{Messaging:} Kafka, WebSockets
+    \item \textbf{Tools:} Git, GitHub, GraphQL, PgAdmin4
+\end{itemize}
+
+\section{\Large{Education}}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{Bachelor of Engineering (Electronics \& Communication Engineering)} & 2019 -- 2023 | CGPA: 7.61/10 \\
+    Yenepoya Institute of Technology, Mangalore, India & \\
+\end{tabularx}
+
+\end{document}
