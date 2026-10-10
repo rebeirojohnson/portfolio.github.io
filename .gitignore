@@ -1,7 +1,8 @@
-**.aux
-**.log
-**.aux
-**.fls
-**.out
-**.fdb_latexmk
+**/*.aux
+**/*.log
+**/*.fls
+**/*.out
+**/*.fdb_latexmk
+**/*.synctex.gz
+**/*.toc
 .env
