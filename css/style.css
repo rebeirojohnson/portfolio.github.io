@@ -141,6 +141,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-copy { padding: clamp(36px, 6vw, 72px); }
 .project-topline { display: flex; justify-content: space-between; color: #617069; }
 .project-copy h3 { margin: 56px 0 22px; font-size: clamp(38px, 4vw, 56px); line-height: 1.02; letter-spacing: -.045em; }
+.project-copy h3 a { text-decoration: none; }
+.project-copy h3 a:hover { text-decoration: underline; text-underline-offset: 8px; }
+.project-topline a { text-underline-offset: 4px; }
 .project-copy > p { max-width: 640px; color: var(--ink-soft); font-size: 18px; }
 .feature-list { margin: 30px 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .feature-list li { position: relative; padding: 13px 0 13px 24px; border-bottom: 1px solid var(--line); font-size: 14px; }

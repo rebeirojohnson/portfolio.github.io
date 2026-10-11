@@ -82,9 +82,9 @@
         <section class="impact-strip" aria-label="Career highlights">
             <div class="shell impact-grid">
                 <div><strong>10K+</strong><span>Images processed<br>every day</span></div>
+                <div><strong>3h</strong><span>Exam-to-remedial<br>delivery</span></div>
+                <div><strong>50%</strong><span>Faster API<br>responses</span></div>
                 <div><strong>15+</strong><span>Schools using<br>Class 10 workflows</span></div>
-                <div><strong>6</strong><span>Developers led<br>across the tech team</span></div>
-                <div><strong>10×</strong><span>Faster PDF<br>generation pipeline</span></div>
             </div>
         </section>
 
@@ -127,19 +127,23 @@
                     <div class="experience-details">
                         <div class="achievement">
                             <span>01</span>
-                            <div><h4>Architected a distributed job-processing system</h4><p>Built a Redis-backed job queue that coordinates background workers across 5+ servers and multiple cloud providers to process 10,000+ images daily. Its document conversion, barcode detection, orientation correction, AI question-region detection, answer cropping, and response workflows are trusted by 15+ schools.</p></div>
+                            <div><h4>Led a six-developer team building distributed systems</h4><p>Delivered a distributed examination platform and real-time collaborative CMS supporting 10+ concurrent users. Built a Redis-backed job queue across 5+ servers and multiple cloud providers, processing 10,000+ images daily for workflows trusted by 15+ schools.</p></div>
                         </div>
                         <div class="achievement">
                             <span>02</span>
-                            <div><h4>Orchestrated print and scan workflows</h4><p>Built a smart platform that schedules jobs across 8 printers and processes barcode events from 4 serial-connected scanners for automated document tracking.</p></div>
+                            <div><h4>Orchestrated 1,000+ daily print jobs</h4><p>Built a smart platform that schedules jobs across 8 printers, eliminates manual routing, and processes barcode events from 4 serial-connected scanners for automated document tracking.</p></div>
                         </div>
                         <div class="achievement">
                             <span>03</span>
-                            <div><h4>Engineered replication and disaster recovery</h4><p>Designed PostgreSQL and MinIO replication systems with disaster-recovery procedures to strengthen data durability, service continuity, and recovery readiness.</p></div>
+                            <div><h4>Engineered replication and disaster recovery</h4><p>Maintained sub-minute lag for PostgreSQL replication, strengthening database availability. Implemented MinIO replication with disaster-recovery procedures to improve data durability and recovery readiness.</p></div>
                         </div>
                         <div class="achievement">
                             <span>04</span>
-                            <div><h4>Led the team and owned production infrastructure</h4><p>Led a six-developer engineering team while managing server maintenance, workload distribution, capacity scaling, monitoring, alerting, and Docker-based CI/CD across a multi-server platform.</p></div>
+                            <div><h4>Owned production infrastructure</h4><p>Managed server maintenance, workload distribution, scaling, monitoring, alerting, and Docker-based CI/CD, enabling one team production deployment per workday in under 15 minutes.</p></div>
+                        </div>
+                        <div class="achievement">
+                            <span>05</span>
+                            <div><h4>Cut API response time by 50%</h4><p>Optimized PostgreSQL access through query rewrites, indexing, caching, and execution-plan analysis across critical backend workflows.</p></div>
                         </div>
                     </div>
                 </article>
@@ -155,30 +159,30 @@
             <article class="project-card reveal">
                 <div class="project-copy">
                     <div class="project-topline">
-                        <span>Flagship project</span>
-                        <span>2026</span>
+                        <span>Internal platform</span>
+                        <a href="https://greedandfear.in/" target="_blank" rel="noopener">Visit live ↗</a>
                     </div>
-                    <h3>Distributed Algorithmic Trading Platform</h3>
-                    <p>A real-time trading backend for market data, order management, and portfolio tracking, built as independently scalable services.</p>
+                    <h3><a href="https://greedandfear.in/" target="_blank" rel="noopener">Greed &amp; Fear</a></h3>
+                    <p>An internal stock market intelligence tool used by 6+ people daily to monitor live markets, research stocks, track portfolios, and act on timely data.</p>
                     <ul class="feature-list">
-                        <li>Low-latency order validation, execution, cancellation, and position updates</li>
-                        <li>Kafka-driven market and order events with Redis-backed caching</li>
-                        <li>Idempotent consumers, retry handling, and persistent trade history</li>
-                        <li>WebSocket updates for live order and portfolio state</li>
+                        <li>Real-time stock-data ingestion from BSE India, Moneycontrol, and multiple market sources</li>
+                        <li>Celery and Redis background workers for continuous collection and processing</li>
+                        <li>Live dashboards, stock screening, sentiment, alerts, and portfolio tracking</li>
+                        <li>Historical analysis with downloadable reports and data exports</li>
                     </ul>
                     <div class="tags">
-                        <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Kafka</span><span>Docker</span>
+                        <span>Python</span><span>Django</span><span>FastAPI</span><span>Celery</span><span>Redis</span><span>PostgreSQL</span><span>Docker</span>
                     </div>
                 </div>
-                <div class="architecture" role="img" aria-label="Trading platform architecture connecting market data, Kafka, an order service, Redis, PostgreSQL, and WebSockets">
+                <div class="architecture" role="img" aria-label="Greed and Fear architecture collecting stock data from BSE India, Moneycontrol, and other sources through Celery workers into Redis, PostgreSQL, and FastAPI services">
                     <div class="arch-row">
-                        <span>Market feed</span><i></i><span>Kafka</span><i></i><span>Strategy</span>
+                        <span>BSE India</span><i></i><span>Moneycontrol</span><i></i><span>More sources</span>
                     </div>
                     <div class="arch-spine"></div>
-                    <div class="arch-core">Order<br>Service<small>FastAPI</small></div>
+                    <div class="arch-core">Data<br>Workers<small>Celery</small></div>
                     <div class="arch-branches"><i></i><i></i><i></i></div>
                     <div class="arch-row arch-bottom">
-                        <span>Redis</span><span>PostgreSQL</span><span>WebSocket</span>
+                        <span>Redis</span><span>PostgreSQL</span><span>FastAPI</span>
                     </div>
                 </div>
             </article>
@@ -187,14 +191,14 @@
                 <article class="work-item reveal">
                     <span class="work-number">01</span>
                     <h3>Real-time content collaboration</h3>
-                    <p>Led development of a multi-user content management system with real-time editing workflows.</p>
-                    <span class="work-type">Production system</span>
+                    <p>Led development of a real-time content management system supporting 10+ concurrent collaborators.</p>
+                    <span class="work-type">10+ concurrent users</span>
                 </article>
                 <article class="work-item reveal">
                     <span class="work-number">02</span>
                     <h3>Adaptive learning engine</h3>
-                    <p>Used historical performance and learning gaps to generate personalized question sets for students.</p>
-                    <span class="work-type">Recommendation system</span>
+                    <p>Supported a 5,000-student program and validated a 1,000-answer-sheet batch: 2 hours for analysis plus 1 hour to generate and print personalized remedial worksheets, reducing turnaround from one working day to 3 hours. Teachers across most participating schools reported stronger engagement.</p>
+                    <span class="work-type">5,000-student program</span>
                 </article>
                 <article class="work-item reveal">
                     <span class="work-number">03</span>
@@ -214,7 +218,7 @@
                 <div class="skill-grid reveal">
                     <div class="skill-group"><span>01</span><h3>Languages</h3><p>Python<br>LaTeX</p></div>
                     <div class="skill-group"><span>02</span><h3>Backend</h3><p>Django<br>FastAPI<br>GraphQL</p></div>
-                    <div class="skill-group"><span>03</span><h3>Data</h3><p>PostgreSQL<br>Redis<br>Neo4j<br>MySQL</p></div>
+                    <div class="skill-group"><span>03</span><h3>Data</h3><p>PostgreSQL<br>Redis<br>MySQL</p></div>
                     <div class="skill-group"><span>04</span><h3>Infrastructure</h3><p>Docker<br>AWS EC2 &amp; S3<br>Cloudflare Pages &amp; R2<br>CI/CD<br>MinIO</p></div>
                     <div class="skill-group"><span>05</span><h3>Messaging</h3><p>Kafka<br>WebSockets<br>Event-driven systems</p></div>
                     <div class="skill-group"><span>06</span><h3>Engineering</h3><p>Git &amp; GitHub<br>System design<br>Monitoring</p></div>

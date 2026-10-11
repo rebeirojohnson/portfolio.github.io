@@ -28,6 +28,26 @@ try {
         }
     }
 
+    $supportPatterns = @(
+        '*.aux',
+        '*.fdb_latexmk',
+        '*.fls',
+        '*.log',
+        '*.out',
+        '*.synctex.gz',
+        '*.toc'
+    )
+
+    foreach ($pattern in $supportPatterns) {
+        Get-ChildItem -LiteralPath $resumeDirectory -Filter $pattern -File |
+            Remove-Item -Force
+    }
+
+    $templatePdf = Join-Path $resumeDirectory 'resume_common.pdf'
+    if (Test-Path -LiteralPath $templatePdf) {
+        Remove-Item -LiteralPath $templatePdf -Force
+    }
+
     Write-Output 'Built both resumes and removed LaTeX supporting files.'
 }
 finally {
